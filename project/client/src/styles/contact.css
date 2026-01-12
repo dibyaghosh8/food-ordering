@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.contact-container {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 40px;
+  max-width: 700px;
+  width: 90%;
+  animation: fadeInUp 1s ease forwards;
+  color: #fff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.contact-container p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e0f7fa;
+}
+
+.toggle-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.toggle-buttons button.active {
+  background-color: #ff4b2b;
+  color: #fff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input {
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.contact-form input::placeholder {
+  color: #d1ecf1;
+}
+
+.contact-form input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.contact-form button {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  padding: 14px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(to left, #ff416c, #ff4b2b);
+  transform: scale(1.05);
+}
+
+.error-box {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-left: 4px solid #ff4b2b;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #ffb3b3;
+}
+
+.error-box h4 {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.error-box ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.error-box li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}

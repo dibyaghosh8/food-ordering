@@ -1,0 +1,254 @@
+/* Container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  background-color: #fffaf4;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: linear-gradient(180deg, #fdf6e3, #ffbb88, #d94f4f);
+  border-right: 1px solid #ddd;
+  padding: 20px 10px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #222;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar ul li::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover::before {
+  left: 0;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+  background-color: #a94442;
+  color: white;
+  transform: translateX(4px);
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Header */
+.header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Filters */
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  background: linear-gradient(to right, #fff0d6, #ffe8cc);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filters-container input[type="text"] {
+  padding: 12px 20px;
+  width: 360px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 15px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.filters-container input[type="text"]:focus {
+  border-color: #f3900e;
+  box-shadow: 0 0 8px rgba(243, 144, 14, 0.6);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 14px;
+}
+
+.filters button:hover {
+  background-color: #ffdd99;
+  transform: scale(1.05);
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Product Card */
+.product-card {
+  position: relative;
+  background-color: white;
+  width: 180px;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border: 1px solid #f3900e;
+  box-shadow: 0 4px 12px rgba(243, 144, 14, 0.3);
+}
+
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.label {
+  font-size: 12px;
+  color: green;
+  margin: 5px 0;
+}
+
+.product-card h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.product-card .price {
+  color: #a94442;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Button Group */
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .buttonGroup {
+  opacity: 1;
+}
+
+/* Cart Button */
+.cartButton {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cartButton img {
+  height: 20px;
+  width: 20px;
+}
+
+.cartButton:hover {
+  background-color: #f1f1f1;
+}
+
+/* Order Button */
+.orderButton {
+  background-color: #ebbd3fd2;
+  color: #131212;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.orderButton:hover {
+  background-color: #f3900e;
+}
+
+/* Footer */
+.footer {
+  background: #ce6400;
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+  border-top: 10px solid #ddd;
+  font-weight: bold;
+  color: white;
+}
